@@ -7,6 +7,7 @@ VBoxManage createvm --name ${VM_NAME} --ostype "FreeBSD_64" --register
 
 VBoxManage modifyvm ${VM_NAME} --cpus 4
 VBoxManage modifyvm ${VM_NAME} --ioapic on
+VBoxManage modifyvm ${VM_NAME} --rtcuseutc on
 VBoxManage modifyvm ${VM_NAME} --boot1 dvd --boot2 disk --boot3 none --boot4 none
 VBoxManage modifyvm ${VM_NAME} --memory 1024 --vram 8
 
