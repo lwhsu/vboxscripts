@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VM_NAME=vm
+VM_NAME=$1
 VM_FOLDER=~/VirtualBox\ VMs/${VM_NAME}
 
 VBoxManage createvm --name ${VM_NAME} --ostype "FreeBSD_64" --register
