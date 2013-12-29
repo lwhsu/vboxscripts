@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ $# -lt 1 ]; then
+	echo "Usage: $0 <VM name>"
+	exit 1
+fi
+
 VM_NAME=$1
 VM_FOLDER=~/VirtualBox\ VMs/${VM_NAME}
 
