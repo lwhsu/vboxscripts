@@ -11,6 +11,7 @@ VM_FOLDER=~/VirtualBox\ VMs/${VM_NAME}
 VBoxManage createvm --name ${VM_NAME} --ostype "FreeBSD_64" --register
 
 VBoxManage modifyvm ${VM_NAME} --cpus 2
+VBoxManage modifyvm ${VM_NAME} --chipset ich9
 VBoxManage modifyvm ${VM_NAME} --ioapic on
 VBoxManage modifyvm ${VM_NAME} --rtcuseutc on
 VBoxManage modifyvm ${VM_NAME} --boot1 dvd --boot2 disk --boot3 none --boot4 none
