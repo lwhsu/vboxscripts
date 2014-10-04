@@ -28,4 +28,4 @@ VBoxManage storageattach "%VM_NAME%" --storagectl "SATA Controller" --port 0 --d
 VBoxManage storageattach "%VM_NAME%" --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium emptydrive
 
 VBoxManage modifyvm "%VM_NAME%" --nic1 nat --nictype1 virtio
-VBoxManage modifyvm "%VM_NAME%" --nic2 hostonly --nictype2 virtio --hostonlyadapter2 vboxnet0
+VBoxManage modifyvm "%VM_NAME%" --nic2 hostonly --nictype2 virtio --hostonlyadapter2 "VirtualBox Host-Only Ethernet Adapter"
