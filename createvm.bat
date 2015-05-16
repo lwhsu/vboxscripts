@@ -3,11 +3,10 @@
 PATH C:\Program Files\Oracle\VirtualBox
 set VM_FOLDER_PARENT=C:\VirtualBox\VirtualBox VMs
 
-rem TODO: convert these to .bat
-rem if [ $# -lt 1 ]; then
-rem 	echo "Usage: $0 <VM name>"
-rem 	exit 1
-rem fi
+if [%1] EQU [] (
+	echo Usage: %0 ^<VM name^>
+	exit /B 1
+)
 
 set VM_NAME=%1
 set VM_FOLDER=%VM_FOLDER_PARENT%\%VM_NAME%
